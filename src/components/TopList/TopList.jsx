@@ -36,17 +36,18 @@ const TopList = () => {
             <p>Our top list</p>
         </div>
         {/* card section */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-6'>
             {FoodData.map((item, index)=>(
                 <div
                     key={index}
-                    className='bg-white/50 p-3 rounded-3xl
+                    className='bg-white/50 p-5 sm:p-3 rounded-3xl
                     hover:scale-110 transition duration-300' 
                     >
                         <img 
                             src={item.image}
                             alt=""
-                            className='w-40 h-40 mx-auto object-cover rounded-full img-shadow'
+                            className='w-60 sm:w-40 sm:h-40 mx-auto object-cover
+                            rounded-full img-shadow'
                         />
                         <div className='space-y-2'>
                             <p className='text-red-500'>{item.rating}</p>
